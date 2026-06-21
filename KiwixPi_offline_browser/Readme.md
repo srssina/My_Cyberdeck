@@ -4,13 +4,6 @@ A lightweight setup script for running [Kiwix](https://www.kiwix.org/) offline c
  
 Serves your local `.zim` files via `kiwix-serve` and displays them full-screen using the lightweight [Surf](https://surf.suckless.org/) browser — no desktop chrome, minimal resource usage.
  
-## Features
- 
-- Installs `kiwix-tools` and `surf` automatically if not already present
-- Auto-detects all `.zim` files in your chosen directory and serves them as a single browsable library
-- Verifies the server is responding before launching the browser (avoids blank-page errors)
-- Cleans up automatically — closing the browser stops the server too
-- Safe to re-run any time; kills stale server processes before starting fresh
 ## Requirements
  
 - Raspberry Pi (tested on Pi 5) running Raspberry Pi OS Bookworm
@@ -76,29 +69,3 @@ To force-stop everything manually at any time:
 ```bash
 pkill surf; pkill kiwix-serve
 ```
- 
-## Troubleshooting
- 
-**"No .zim files found"**
-Check the exact filenames in your ZIM directory:
-```bash
-ls -la /home/pi/Documents/*.zim
-```
- 
-**Surf doesn't go full-screen**
-Flag support can vary by build. Check available options with:
-```bash
-surf -h
-```
-and adjust the `-F` flag in the script if needed.
- 
-**Port already in use**
-The script kills any existing `kiwix-serve` process automatically, but if you changed the default port and have a conflicting service, edit `PORT` in the script.
- 
-## Where to get ZIM files
- 
-Browse and download content packages from [library.kiwix.org](https://library.kiwix.org) — Wikipedia subsets, Wiktionary, Stack Exchange sites, Project Gutenberg, and more, in sizes from a few MB to tens of GB.
- 
-## License
- 
-MIT — use, modify, and share freely.
