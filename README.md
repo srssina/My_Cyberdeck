@@ -15,6 +15,6 @@ This is main Repository for my Raspberry pi Cyberdeck passion project.
 
 ## Sub-Projects
  
-### 1. Offline Content (Kiwix) — [`/kiwix`](./kiwixPi_offline_browser)
+### 1. [Offline Content (Kiwix)](https://github.com/srssina/My_Cyberdeck/tree/main/KiwixPi_offline_browser)
 Serving reference content with no internet connection required.
 - Tool: Kiwix, serving `.zim` archive files so reference content (e.g. Wikipedia, technical docs) can be browsed fully offline on the device.
